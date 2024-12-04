@@ -1,0 +1,81 @@
+{
+    "categories": [
+        {
+            "id": "1",
+            "name": "العتاوله",
+            "category_slug": "men's-fashion",
+            "category_type": "مسلسلات",
+            "item_img": "/images/feat1.svg",
+            "status": "جديد"
+
+        },
+        {
+            "id": "2",
+            "name": "المداح",
+            "category_slug": "electronic-device-",
+            "category_type": "برامج",
+            "item_img": "/images/feat1.svg",
+            "status": "جديد"
+
+        },
+        {
+            "id": "3",
+            "name": "نقطه",
+            "category_slug": "electronic-accessories-",
+            "category_type": "أفلام",
+            "item_img": "/images/feat1.svg",
+            "status": "جديد"
+
+        }
+        ,
+        {
+            "id": "4",
+            "name": "رسوم",
+            "category_slug": "electronic-accessories-",
+            "category_type": "رسوم متحركه",
+            "item_img": "/images/feat1.svg",
+            "status": "جديد"
+
+        }
+        ,
+        {
+            "id": "5",
+            "name": "رسوم",
+            "category_slug": "electronic-accessories-",
+            "category_type": "أفلام",
+            "item_img": "/images/feat1.svg",
+            "status": "جديد"
+
+        }
+        ,
+        {
+            "id": "6",
+            "name": "نقطه",
+            "category_slug": "electronic-accessories-",
+            "category_type": "أفلام",
+            "item_img": "/images/feat1.svg",
+            "status": "جديد"
+
+        }
+        ,
+        {
+            "id": "7",
+            "name": "نقطه",
+            "category_slug": "electronic-accessories-",
+            "category_type": "مسلسلات",
+            "item_img": "/images/feat1.svg",
+            "status": "جديد"
+
+        }
+        ,
+        {
+            "id": "8",
+            "name": "نقطه",
+            "category_slug": "electronic-accessories-",
+            "category_type": "برامج",
+            "item_img": "/images/feat1.svg",
+            "status": "جديد"
+        }
+        
+    ]
+}

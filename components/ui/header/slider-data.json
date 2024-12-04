@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "ARE AWESOME",
+      "tagline": "NEXTJS 13 & SWIPER SLIDER",
+      "image": "/image1.jpg"
+
+    },
+    {
+      "id": 2,
+      "title": "GIVE IT A SHOOT",
+      "tagline": "IF YOU LIKE IT",
+      "image": "/image2.jpg"
+
+    },
+    {
+        "id": 3,
+        "title": "GIVE IT A SHOOT",
+        "tagline": "IF YOU LIKE IT",
+        "image": "/image2.jpg"
+  
+      },
+      {
+        "id": 4,
+        "title": "GIVE IT A SHOOT",
+        "tagline": "IF YOU LIKE IT",
+        "image": "/image2.jpg"
+  
+      },
+      {
+        "id": 5,
+        "title": "GIVE IT A SHOOT",
+        "tagline": "IF YOU LIKE IT",
+        "image": "/image2.jpg"
+  
+      }
+  ]
+  
