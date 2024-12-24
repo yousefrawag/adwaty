@@ -15,13 +15,13 @@ import { FreeMode, Navigation } from 'swiper/modules';
 
 const TheBestEver = () => {
   return (
-    <section className='py-pp_80'>
+    <section className='py-pp_80 dark:bg-dark dark:text-white'>
       <div className="container mx-auto">
       <div className='pb-10'>
-        <h1>الأفضل علي الاطلاق</h1>
+        <h1 className='dark:text-white'>الأفضل علي الاطلاق</h1>
       </div>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={4}
         spaceBetween={30}
         navigation={true}
         pagination={{

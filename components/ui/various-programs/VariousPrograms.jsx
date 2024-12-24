@@ -15,10 +15,10 @@ import { FreeMode } from 'swiper/modules';
 
 const VariousPrograms = () => {
   return (
-    <section className='py-pp_80'>
+    <section className='py-pp_80 dark:bg-dark dark:text-white'>
       <div className="container mx-auto">
       <div className='pb-10'>
-        <h1>برامج متنوعة</h1>
+        <h1 className='dark:text-white text-black'>برامج متنوعة</h1>
       </div>
       </div>
       <Swiper

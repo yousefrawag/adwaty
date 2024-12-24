@@ -3,8 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/images/logo2.svg"
 import ThemeToggle from "./ThemeToggle";
+import { usePathname } from "next/navigation.js";
 
 const Navbar = () => {
+  const pathname = usePathname(); 
   const links = [
     { 
       lable: "الرئيسية", 
@@ -12,7 +14,7 @@ const Navbar = () => {
     },
     {
       lable: "مسلسلات",
-      path: "/",
+      path: "/series",
     },
     {
       lable: "نصوص",
@@ -20,25 +22,25 @@ const Navbar = () => {
     },
     {
       lable: "الشركة",
-      path: "/",
+      path: "/about",
     },
     {
       lable: "الخدمات",
-      path: "/",
+      path: "/services",
     },
     {
       lable: "تصريحات صحفية",
-      path: "/",
+      path: "/pressReleases",
     },
     {
         lable: "اتصل بنا",
-        path: "/",
+        path: "/contact",
       }
   ];
 
 
   return (
-    <nav className="fixed top-0 w-screen z-40">
+    <nav className="fixed top-0 w-screen z-40 dark:bg-dark bg-withe">
       <div className="container mx-auto">
         <div className="flex items-center justify-between py-3 rounded-lg">
           <div>
@@ -63,7 +65,7 @@ const Navbar = () => {
                     key={index}
                     className="capitalize text-sm py-1 font-medium"
                   >
-                    <Link className="py-1 text-white hover:text-primary hover:underline" href={link.path}>{link.lable}</Link>
+                    <Link className={pathname === link.path ? `text-primary border-b-[1px] border-primary py-2`: `py-2 text-grayColor dark:text-white hover:text-primary`} href={link.path}>{link.lable}</Link>
                   </li>
                 );
               })}
