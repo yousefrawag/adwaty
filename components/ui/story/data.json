@@ -3,19 +3,33 @@
         {
             "id": "1",
             "name": "العتاوله",
-            "category_slug": "men's-fashion",
-            "category_type": "مسلسلات",
+            "category_slug": "mens-fashion",
+            "category_type": "أفلام",
             "item_img": "/images/feat1.svg",
-            "status": "جديد"
-
-        },
+            "status": "جديد",
+            "details": {
+              "title": "العتاوله",
+              "fil_DS": "تدور أحداث الفيلم في إطار اجتماعي كوميدي...",
+              "film_type": ["كوميديا", "تشويق"],
+              "general_view": "تدور أحداث الفيلم في إطار اجتماعي كوميدي، حيث طبيب الأمراض النفسية يوسف...",
+              "watch": "يمكنك مشاهدة الفيلم بجودة 1080p WEB-DL.",
+              "covers": ["cover1.jpg", "cover2.jpg"],
+              "team": ["محمد أحمد - المخرج", "أحمد علي - المنتج"]
+            }
+          },
         {
             "id": "2",
             "name": "المداح",
             "category_slug": "electronic-device-",
             "category_type": "برامج",
             "item_img": "/images/feat1.svg",
-            "status": "جديد"
+            "status": "جديد",
+                        "details": {
+                "title": "المداح",
+                "fil_DS": "معركه دهاء",
+                "film_type": ["الموسم 1","تشوق", "دراما"]                
+
+            }
 
         },
         {
@@ -24,7 +38,13 @@
             "category_slug": "electronic-accessories-",
             "category_type": "أفلام",
             "item_img": "/images/feat1.svg",
-            "status": "جديد"
+            "status": "جديد",
+                        "details": {
+                "title": "المداح",
+                "fil_DS": "معركه دهاء",
+                "film_type": ["الموسم 1","تشوق", "دراما"]                
+
+            }
 
         }
         ,
@@ -34,7 +54,13 @@
             "category_slug": "electronic-accessories-",
             "category_type": "رسوم متحركه",
             "item_img": "/images/feat1.svg",
-            "status": "جديد"
+            "status": "جديد",
+                        "details": {
+                "title": "المداح",
+                "fil_DS": "معركه دهاء",
+                "film_type": ["الموسم 1","تشوق", "دراما"]                
+
+            }
 
         }
         ,
@@ -44,8 +70,13 @@
             "category_slug": "electronic-accessories-",
             "category_type": "أفلام",
             "item_img": "/images/feat1.svg",
-            "status": "جديد"
+            "status": "جديد",
+                        "details": {
+                "title": "المداح",
+                "fil_DS": "معركه دهاء",
+                "film_type": ["الموسم 1","تشوق", "دراما"]                
 
+            }
         }
         ,
         {
@@ -54,7 +85,13 @@
             "category_slug": "electronic-accessories-",
             "category_type": "أفلام",
             "item_img": "/images/feat1.svg",
-            "status": "جديد"
+            "status": "جديد",
+                        "details": {
+                "title": "المداح",
+                "fil_DS": "معركه دهاء",
+                "film_type": ["الموسم 1","تشوق", "دراما"]                
+
+            }
 
         }
         ,
@@ -64,17 +101,28 @@
             "category_slug": "electronic-accessories-",
             "category_type": "مسلسلات",
             "item_img": "/images/feat1.svg",
-            "status": "جديد"
+            "status": "جديد",
+                        "details": {
+                "title": "المداح",
+                "fil_DS": "معركه دهاء",
+                "film_type": ["الموسم 1","تشوق", "دراما"]                
 
-        }
-        ,
+            }
+
+        },
         {
             "id": "8",
             "name": "نقطه",
             "category_slug": "electronic-accessories-",
             "category_type": "برامج",
             "item_img": "/images/feat1.svg",
-            "status": "جديد"
+            "status": "جديد",
+                        "details": {
+                "title": "المداح",
+                "fil_DS": "معركه دهاء",
+                "film_type": ["الموسم 1","تشوق", "دراما"]                
+
+            }
         }
         
     ]

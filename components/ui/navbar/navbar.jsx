@@ -17,10 +17,6 @@ const Navbar = () => {
       path: "/series",
     },
     {
-      lable: "نصوص",
-      path: "/",
-    },
-    {
       lable: "الشركة",
       path: "/about",
     },
