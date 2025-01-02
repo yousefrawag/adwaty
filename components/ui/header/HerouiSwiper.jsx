@@ -35,16 +35,16 @@ const HerouiSwiper = ({data}) => {
             {data?.map(({ id, seriesimagesCutmez  ,title , details , promoLink , castimagesCutmez }) => (
               <SwiperSlide key={id}>
                 <div
-                  className={`h-[100%] w-full absolute left-0 top-0   bg-cover `}
+                  className={`h-[100%] h-[100%] relative w-full left-0 top-0   bg-cover `}
                  
 
                 >
                   <Image 
-                  src={seriesimagesCutmez?.[0]?.url}  alt="image"
-                  width={500}  // Higher resolution for better quality
-                  height={500}
-                  layout="intrinsic"  // Maintain the aspect ratio
-                  className="w-full h-full object-cover" 
+                  src={seriesimagesCutmez?.[0]?.url}
+                  alt="image"
+                  objectFit="cover"
+                  fill
+                  priority
                 />
                 </div>
                 <div className="h-full w-full absolute left-0 top-0 bg-black opacity-20  ">

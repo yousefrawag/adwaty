@@ -78,10 +78,8 @@ const Category = () => {
                     <Image
                       src={item?.seriesimagesCutmez[0]?.url}
                       alt="Picture of the logo"
-                     fill
-                     
+                      fill
                       priority
-                    
                     />
                     <span className="absolute top-0 right-0 py-1 px-2 bg-primary text-white text-[13px] rounded-bl-lg">
                       {item?.status}

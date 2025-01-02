@@ -4,9 +4,12 @@ import Image from "next/image";
 import logo from "@/public/images/logo2.svg"
 import ThemeToggle from "./ThemeToggle";
 import { usePathname } from "next/navigation.js";
+import { useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname(); 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const links = [
     { 
       lable: "الرئيسية", 
@@ -36,8 +39,8 @@ const Navbar = () => {
 
 
   return (
-    <nav className="fixed top-0 w-screen z-40 dark:bg-dark bg-withe">
-      <div className="container mx-auto">
+    <nav className="fixed top-0 w-full z-40 dark:bg-dark bg-withe">
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-3 rounded-lg">
           <div>
           <Image
@@ -50,11 +53,8 @@ const Navbar = () => {
       }}
     />
           </div>
-          <div className="flex items-center gap-8 text-sm">
-              
-          </div>
           <div>
-            <ul className="flex items-center gap-10">
+            <ul className="hidden md:flex items-center gap-10">
               {links.map((link, index) => {
                 return (
                   <li
@@ -68,7 +68,47 @@ const Navbar = () => {
               <ThemeToggle/> 
             </ul>
           </div>
+                          {/* Mobile Menu Button */}
+                          <div className="md:hidden">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-[#2C2C2E] hover:text-[#00AEEF]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 5.25h16.5M3.75 12h16.5m-16.5 6.75h16.5"
+              />
+            </svg>
+          </button>
         </div>
+        {menuOpen && (
+                    <div className="absolute top-[97px] right-0 bg-white shadow-lg rounded-b-lg w-full z-50 p-4">
+                    <ul className="flex flex-col gap-4 text-[16px] font-medium">
+                      {links.map((link, index) => {
+                        return (
+                          <li
+                            key={index}
+                            className="capitalize text-sm py-1 font-medium"
+                          >
+                            <Link onClick={() => setMenuOpen(false)} className={pathname === link.path ? `text-primary border-b-[1px] border-primary py-2`: `py-2 text-grayColor dark:text-white hover:text-primary`} href={link.path}>{link.lable}</Link>
+                          </li>
+                        );
+                      })}
+                      <ThemeToggle/> 
+                    </ul>
+                  </div>
+        )}
+        </div>
+
       </div>
     </nav>
   );
