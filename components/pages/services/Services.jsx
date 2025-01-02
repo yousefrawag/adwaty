@@ -8,7 +8,7 @@ const Services = () => {
       <section className="w-full h-[300px] bg-gradient-to-r from-[#00CC9A] to-[#009BFB] ">
         <div className=" w-full flex overflow-hidden items-center flex-col justify-center h-full gap-4 text-white text-center">
           <h1 className="text-white">خدمات الشركة</h1>
-          <p className="max-w-[45%] leading-7 font-medium">
+          <p className="w-full  xl:max-w-[45%] lg:max-w-[45%] leading-7 font-medium">
             سيدرز آرت برودكشن (روح استديو) رائدةٌ في صناعة السينما والمسلسلات
             العربية شراء حقوق / توكيل انتاج / إنتاج / توزيع أفلام سينمائية /
             مسلسلات تلفزيونية / برامج ألعاب / مسرحيات / رسوم متحركة نشأ محتوى

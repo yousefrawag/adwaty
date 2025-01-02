@@ -5,8 +5,8 @@ const Contact = () => {
   return (
     <section className="py-pp_80 mt-[97px] dark:bg-dark">
       <div className="container mx-auto px-4">
-        <div className="flex gap-12">
-          <div className="w-1/2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-12">
+          <div className="w-full ">
             <div>
               <h1 className="text-primary font-semibold text-[24px]">
                 تواصل معنا
@@ -31,7 +31,7 @@ const Contact = () => {
                           <div className="py-8 text-base leading-6 space-y-8 text-gray-700 sm:text-lg sm:leading-7">
                             <div className="relative">
                               <input
-                                autocomplete="off"
+                                autoComplete="off"
                                 id="name"
                                 name="name"
                                 type="text"
@@ -39,7 +39,7 @@ const Contact = () => {
                                 placeholder="أدخل الاسم"
                               />
                               <label
-                                for="name"
+                                htmlFor="name"
                                 className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                               >
                                 أدخل الاسم
@@ -47,7 +47,7 @@ const Contact = () => {
                             </div>
                             <div className="relative">
                               <input
-                                autocomplete="off"
+                                autoComplete="off"
                                 id="phone"
                                 name="phone"
                                 type="phone"
@@ -55,7 +55,7 @@ const Contact = () => {
                                 placeholder="أدخل الهاتف"
                               />
                               <label
-                                for="phone"
+                                htmlFor="phone"
                                 className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                               >
                                 أدخل الهاتف
@@ -63,7 +63,7 @@ const Contact = () => {
                             </div>
                             <div className="relative">
                               <input
-                                autocomplete="off"
+                                autoComplete="off"
                                 id="email"
                                 name="email"
                                 type="text"
@@ -71,7 +71,7 @@ const Contact = () => {
                                 placeholder="أدخل البريد الإلكتروني"
                               />
                               <label
-                                for="email"
+                                htmlFor="email"
                                 className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                               >
                                 أدخل البريد الإلكتروني
@@ -79,7 +79,7 @@ const Contact = () => {
                             </div>
                             <div className="relative">
                               <textarea
-                                autocomplete="off"
+                                autoComplete="off"
                                 id="textArea"
                                 name="textArea"
                                 type="text"
@@ -87,7 +87,7 @@ const Contact = () => {
                                 placeholder="أدخل رسالتك"
                               />
                               <label
-                                for="textArea"
+                                htmlFor="textArea"
                                 className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                               >
                                 أدخل رسالتك
@@ -107,15 +107,15 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="w-1/2">
-            <div className="w-full h-[100%] relative">
+          <div className="w-full h-ful relative">
+          
               <Image
                 src="/images/306~cinema 1.svg"
                 alt="picture 1"
                 fill
                 objectFit="cover"
               />
-            </div>
+           
           </div>
         </div>
       </div>

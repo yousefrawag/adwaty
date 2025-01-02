@@ -1,9 +1,12 @@
+"use client"
 import SeriesDetails from "@/components/ui/story/SeriesDetails.jsx"
+import { useParams } from "next/navigation";
 
 const page = () => {
+  const { id } = useParams();
   return (
     <>
-      <SeriesDetails/>
+      <SeriesDetails selectedCategoryId={id}/>
     </>
   )
 }

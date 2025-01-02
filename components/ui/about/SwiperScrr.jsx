@@ -33,8 +33,8 @@ const  SwiperScrr = () => {
 
         {data.map((item) => {
           return         <SwiperSlide key={item.id}>
-          <div  className='flex items-center justify-between'>
-            <div className='pr-20 w-2/4 '>
+          <div  className='flex flex-col gap-4  xl:flex-row lg:flex-row xl:items-center  justify-between'>
+            <div className='pr-20 w-full lg:w-2/4  xl:w-2/4 sm:mb-4 md:mb-4 '>
               <h1>{item.title}</h1>
               <p className='my-5'>{item.desc}</p>
               <Link href="/about" className='flex cursor-pointer items-center opacity-80 justify-center gap-1 bg-btnColor rounded-full text-white h-[44px] w-[181px] text-[18px]'> <GoArrowUpRight /> عن الشركة</Link>

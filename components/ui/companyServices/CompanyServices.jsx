@@ -4,7 +4,7 @@ import { SlEnergy } from "react-icons/sl";
 
 const CompanyServices = () => {
   return (
-    <section className="py-pp_80 overflow-hidden dark:bg-dark">
+    <section className="py-pp_80 h-auto dark:bg-dark">
       <div className="container mx-auto px-4">
         <div>
             <div>
@@ -15,7 +15,7 @@ const CompanyServices = () => {
                     fill
                     objectFit="cover"
                     />
-                <div className="absolute bg-[#F5F5F5] p-6 translate-x-[-90%] translate-y-[30%] rounded-lg shadow-lg left-0 bottom-0">
+                <div className="absolute bg-[#F5F5F5] p-6 translate-x-[0%] translate-y-[90%] xl:translate-x-[-90%]  translate-y-[30%] lg:translate-x-[-90%] translate-y-[30%] mb-[4rem] rounded-lg shadow-lg left-0 ">
                     <div className="bg-[#06A580] rounded-lg text-white flex items-center justify-center h-10 w-10"><GrCertificate />
                     </div>
                     <span className="text-grayColor text-[14px] font-medium inline-block my-2">67  سنه من الخبرة</span>
@@ -24,9 +24,9 @@ const CompanyServices = () => {
                 </div>
             </div>
 
-            <div className="pt-[150px] flex w-full items-start justify-end">
-                <div className="relative w-[500px] h-[340px]">
-                <div className="absolute z-10 bg-[#F5F5F5] p-6 translate-x-[90%] translate-y-[30%] rounded-lg shadow-lg left-0 bottom-0">
+            <div className="pt-[150px] mb-10 mt-4 flex w-full items-start justify-end">
+                <div className="relative mt-5 w-[500px] h-[340px]">
+                <div className="absolute z-10 bg-[#F5F5F5] p-6 translate-x-[0%]  translate-y-[100%] xl:translate-x-[90%] translate-y-[40%] lg:translate-x-[90%] translate-y-[40%] rounded-lg shadow-lg left-0 bottom-0">
                     <div className="bg-[#06A580] rounded-lg text-white flex items-center justify-center h-10 w-10"><SlEnergy />
                     </div>
                     <span className="text-grayColor text-[14px] font-medium inline-block my-2">طاقتنا</span>
