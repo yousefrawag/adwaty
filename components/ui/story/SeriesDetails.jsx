@@ -88,7 +88,7 @@ const handelplay = () => {
                       ></iframe>
                     ) : (
                       <Image
-                        src={selectedCategory?.seriesimagesCutmez[1]?.url}
+                        src={selectedCategory?.seriesimagesCutmez[0]?.url}
                         alt="trailer-cover"
                         fill
                         objectFit="cover"

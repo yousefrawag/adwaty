@@ -22,3 +22,23 @@ h1 {
   font-weight: 600;
 }
 
+.swiper-pagination {
+  position: absolute;
+  bottom: 80px !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap between dots */
+}
+
+.swiper-pagination-bullet {
+  width: 40px !important;
+  height: 5px !important;
+  background-color: white !important; /* Default background for inactive dots */
+  border-radius: 1px !important;
+
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #06A580 !important; /* Main color for active dot */
+}

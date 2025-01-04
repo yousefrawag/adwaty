@@ -1,7 +1,7 @@
 import ModernBlogs from '@/components/ui/modernBlogs/ModernBlogs.jsx'
 import Image from 'next/image.js'
 
-const PressReleases = () => {
+const PressReleases = ({blogs}) => {
   return (
     <div>
       <section className='w-full h-[300px] relative mt-[97px]'>
@@ -17,7 +17,7 @@ const PressReleases = () => {
         </div>
       </section>
       {/* Modern Blogs section */}
-      <ModernBlogs/>
+      <ModernBlogs blogs={blogs}/>
     </div>
   )
 }

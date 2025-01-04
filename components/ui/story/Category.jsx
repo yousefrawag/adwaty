@@ -47,7 +47,7 @@ const Category = () => {
     <div>
       {/* parent */}
 
-      <div className="py-10">
+      <div className="py-10 ">
         <div className="flex gap-4 items-center">
           {unique_Data?.map((category) => {
             return (
@@ -81,9 +81,7 @@ const Category = () => {
                       fill
                       priority
                     />
-                    <span className="absolute top-0 right-0 py-1 px-2 bg-primary text-white text-[13px] rounded-bl-lg">
-                      {item?.status}
-                    </span>
+             
                   </div>
                   <div className="absolute flex flex-col items-start px-6 justify-center transition-all duration-200 group-hover:translate-y-0 w-full h-full bg-[#CDCBC9] bottom-0 translate-y-full lef-0">
                     <h1 className="text-[#3C3F46] font-bold text-[16px]">{item.title}</h1>

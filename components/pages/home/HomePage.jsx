@@ -8,10 +8,8 @@ import VariousPrograms from "@/components/ui/various-programs/VariousPrograms";
 import { AuthFetchBlog } from "@/utils/FetchSeries";
 const HomePage = () => {
 const {data , loading} = AuthFetchBlog()
-if(loading) {
-  return <h2>loadding...</h2>
-}
-console.log(data);
+
+
 
 
 
@@ -24,7 +22,7 @@ console.log(data);
       {/* about section */}
       <About />
       {/* Various Programs */}
-      <VariousPrograms />
+      <VariousPrograms data={data} />
       {/* The Best Ever */}
       <TheBestEver />
     </div>

@@ -72,7 +72,7 @@ const Navbar = () => {
                           <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-[#2C2C2E] hover:text-[#00AEEF]"
+            className="text-[#2C2C2E] text-primary"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const Navbar = () => {
           </button>
         </div>
         {menuOpen && (
-                    <div className="absolute top-[97px] right-0 bg-white shadow-lg rounded-b-lg w-full z-50 p-4">
+                    <div className="absolute top-[97px] right-0 bg-white dark:bg-grayColor shadow-lg rounded-b-lg w-full z-50 p-4">
                     <ul className="flex flex-col gap-4 text-[16px] font-medium">
                       {links.map((link, index) => {
                         return (

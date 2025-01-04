@@ -2,6 +2,8 @@ import Image from 'next/image'
 import darkLogo from "@/public/images/darkLogo.svg"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import Link from 'next/link';
+import { FaSquareXTwitter } from "react-icons/fa6";
+
 
 const Footer = () => {
   return (
@@ -19,11 +21,11 @@ const Footer = () => {
         <div className='w-full px-10 xl:px-0 lg:px-0'>
             <h2 className={headStyle}>الشركة</h2>
             <div className='flex flex-col gap-4 items-start jsutify-start'>
-                <Link className={textColor} href="#">عنا</Link>
-                <Link className={textColor} href="#">تواصل معنا</Link>
-                <Link className={textColor} href="#">وظائف</Link>
-                <Link className={textColor} href="#">الثقافة</Link>
-                <Link className={textColor} href="#">المدونات</Link>
+                <Link className={textColor} href="/about">عنا</Link>
+                <Link className={textColor} href="/contact">تواصل معنا</Link>
+                <Link className={textColor} href="ظservices">خدمات</Link>
+                <Link className={textColor} href="/series">الإعمال</Link>
+                <Link className={textColor} href="/pressReleases">المدونات</Link>
             </div>
         </div>
      
@@ -31,8 +33,8 @@ const Footer = () => {
             <h2 className={headStyle}>تابعونا</h2>
             <div className='flex gap-4'>
                 <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="#"><FaFacebookF /></Link>
-                <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="#"><FaInstagram /></Link>
-                <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="#"><FaLinkedinIn /></Link>
+                <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="https://www.instagram.com/rohsaudi/"><FaInstagram /></Link>
+                <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="https://x.com/Rohsaudi?mx=2"><FaSquareXTwitter /></Link>
                 <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="#"><FaYoutube /></Link>
             </div>
         </div>
