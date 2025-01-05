@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState , useCallback  } from "react";
 import data from "./data.json";
 import Image from "next/image";
 import { FaPlay } from "react-icons/fa6";
@@ -19,19 +19,19 @@ const Category = () => {
   const unique_Data = ["الكل", "مسلسلات", "أفلام", "برامج", "رسوم متحركة"];
   const [category_active, setCategory_active] = useState("الكل");
   const [myData, setData] = useState([...data]);
-  const filterationItems = (category) => {
+  const filterationItems = useCallback((category) => {
     setCategory_active(category);
     if (category === "الكل") {
       return setData(data);
     }
     const showItemSelect = data.filter((items) => items.category === category);
     return setData(showItemSelect);
-  };
+  }, [data]);
   useEffect(() => {
     if (data) {
       filterationItems("الكل");
     }
-  }, [data]);
+  });
   if (loading) {
     return <h2>loadding...</h2>;
   }

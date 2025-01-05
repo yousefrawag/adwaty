@@ -1,14 +1,17 @@
-"use client"
-import SeriesDetails from "@/components/ui/story/SeriesDetails.jsx"
+"use client"; // This must be the first line in the file
+
+import SeriesDetails from "@/components/ui/story/SeriesDetails.jsx";
 import { useParams } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   const { id } = useParams();
+
   return (
     <>
-      <SeriesDetails selectedCategoryId={id}/>
+      <SeriesDetails selectedCategoryId={id} />
     </>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
+
