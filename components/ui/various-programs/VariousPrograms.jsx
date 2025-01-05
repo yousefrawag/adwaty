@@ -32,10 +32,10 @@ const VariousPrograms = ({ data }) => {
           delay: 2000, // 3 seconds
           disableOnInteraction: false, // Keeps autoplay running after user interactions
         }}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true, // Makes dots adjust based on the active slide
-        }}
+        // pagination={{
+        //   clickable: true,
+        //   dynamicBullets: true, // Makes dots adjust based on the active slide
+        // }}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
           640: { slidesPerView: 2, spaceBetween: 20 },

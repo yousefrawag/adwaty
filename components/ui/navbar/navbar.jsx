@@ -87,7 +87,7 @@ const Navbar = () => {
                       pathname === link.path
                         ? `text-primary border-b-[1px] border-primary py-2`
                         : pathname === "/" || pathname === "/series"
-                        ? `py-2 text-white dark:text-white hover:text-primary dark:hover:text-primary ${
+                        ? `py-2 text-black dark:text-white hover:text-primary dark:hover:text-primary ${
                             isScrolled ? "!text-grayColor dark:!text-white" : ""
                           }`
                         : `py-2 text-grayColor dark:text-white hover:text-primary dark:hover:text-primary`
@@ -124,7 +124,7 @@ const Navbar = () => {
             </button>
           </div>
           {menuOpen && (
-            <div className="absolute top-[97px] right-0 bg-white dark:bg-grayColor shadow-lg rounded-b-lg w-full z-50 p-4">
+            <div className="block lg:none absolute top-[97px] right-0 bg-white dark:bg-grayColor shadow-lg rounded-b-lg w-full z-50 p-4">
               <ul className="flex flex-col gap-4 text-[16px] font-medium">
                 {links.map((link, index) => (
                   <li
@@ -136,7 +136,7 @@ const Navbar = () => {
                       className={
                         pathname === link.path
                           ? `text-primary border-b-[1px] border-primary py-2`
-                          : `py-2 text-white dark:text-white hover:text-primary`
+                          : `py-2 text-black dark:text-white hover:text-primary`
                       }
                       href={link.path}
                     >
@@ -144,7 +144,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                 ))}
-                <ThemeToggle />
+                <ThemeToggle  darkMode={darkMode} setDarkMode={setDarkMode}/>
               </ul>
             </div>
           )}

@@ -123,7 +123,7 @@ const handelplay = () => {
         <div className="flex flex-col items-start gap-4 xl:flex-row lg:flex-row  pt-10 dark:bg-dark">
           <div className="w-fll xl:w-1/4 lg:w-1/4">
             <div>
-              <h1>{selectedCategory?.title}</h1>
+              <h1 className="font-bold text-grayColor dark:text-white">{selectedCategory?.title}</h1>
             </div>
             <div className="flex gap-2 mt-2 items-center">
               <FaLocationDot className="text-primary" />

@@ -1,9 +1,15 @@
 import React from 'react'
 
+
 const loading = () => {
   return (
-    <div className='w-full h-screen bg-red-500 p-8'>
-      <h1>this is loading......</h1>
+    <div className="fixed top-0 left-0 right-0 z-20 bg-[#06A580] bottom-0 w-full h-full bg-red ">
+       <div className='w-full h-full flex items-center justify-center flex-col bg-red'>
+        <span className="loader mb-20"></span>
+  
+       </div>
+       
+
     </div>
   )
 }
