@@ -1,34 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-const ThemeToggle = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect (() => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") setDarkMode(true)
-  }, []);
-
-  useEffect (() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark")
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light")
-    }
-  }, [darkMode])
+const ThemeToggle = ({darkMode, setDarkMode}) => {
 
   return (
     <div>
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className={`${darkMode && "dark"} h-10 w-10 rounded-lg p-2`}
+        className={`${darkMode && "dark"} h-10 w-10 bg-grayColor rounded-lg p-2`}
       >
-        {darkMode ? (
+        {!darkMode ? (
           <svg
-            className="fill-violet-700 hidden dark:block"
+            className="fill-violet-700 block dark:hidden"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -36,7 +18,7 @@ const ThemeToggle = () => {
           </svg>
         ) : (
           <svg
-            className="fill-black block dark:hidden "
+            className="fill-white hidden dark:block"
             fill="currentColor"
             viewBox="0 0 20 20"
           >

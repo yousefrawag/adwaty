@@ -24,7 +24,7 @@ h1 {
 
 .swiper-pagination {
   position: absolute;
-  bottom: 80px !important;
+  bottom: 20px !important;
   width: 100%;
   display: flex;
   justify-content: center;

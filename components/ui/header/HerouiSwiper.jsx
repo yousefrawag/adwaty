@@ -35,7 +35,7 @@ const HerouiSwiper = ({data}) => {
             {data?.map(({ id, seriesimagesCutmez  ,title , details , promoLink , castimagesCutmez }) => (
               <SwiperSlide key={id}>
                 <div
-                  className={`h-[100%] h-[100%] relative w-full left-0 top-0   bg-cover `}
+                  className={`h-[100%] h-[100%] relative w-full left-0 top-0 bg-cover `}
                  
 
                 >
@@ -47,12 +47,12 @@ const HerouiSwiper = ({data}) => {
                   priority
                 />
                 </div>
-                <div className="h-full w-full absolute left-0 top-0 bg-black opacity-20  ">
+                <div className="h-full w-full absolute left-0 top-0 bg-black opacity-20">
            
                 </div>
                 <div className="absolute z-2 min-h-[200px] flex p-3  flex-col justify-start w-[700px]  bottom-[10rem]  right-[1rem]">
                  <span className="text-white font-medium	text-2xl">{title}</span>
-                 <div className="bg-[#2D3036] items-center mt-5 text-white flex gap-2  rounded-full w-[200px] p-2">
+                 <div className="bg-[#2D3036] items-center mt-5 text-white flex gap-2 rounded-full w-[200px] p-2">
                     <button className="flex items-center gap-2" onClick={() => handelpopup(promoLink)}>
                     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]"><FaPlay className="text-[10px]" /></span><span className="text-[12px]">شاهد الان</span>
                     </button>

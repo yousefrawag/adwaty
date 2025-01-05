@@ -4,7 +4,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Services = () => {
   return (
-    <div className="mt-[97px]">
+    <div>
       <section className="w-full h-[300px] bg-gradient-to-r from-[#00CC9A] to-[#009BFB] ">
         <div className=" w-full flex overflow-hidden items-center flex-col justify-center h-full gap-4 text-white text-center">
           <h1 className="text-white">خدمات الشركة</h1>
