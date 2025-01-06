@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { FaLocationDot } from "react-icons/fa6";
 import { AuthFetchBlog } from "@/utils/FetchSeries";
+import image from "@/public/images/feat1.svg"
 import { FaPlay } from "react-icons/fa";
 const SeriesDetails = ({ selectedCategoryId }) => {
   const {data } = AuthFetchBlog()
@@ -41,7 +42,7 @@ const handelplay = () => {
                 className="w-full h-[212px] relative rounded-lg overflow-hidden"
               >
                 <Image
-                  src={cover?.url}
+                  src={cover?.url ? cover?.url : image}
                   alt={`غلاف ${index + 1}`}
                  fill
                 />
@@ -58,7 +59,7 @@ const handelplay = () => {
               className="w-full h-[212px] relative rounded-lg overflow-hidden"
             >
               <Image
-                src={cover?.url}
+                src={cover?.url ? cover?.url : image}
                 alt={`غلاف ${index + 1}`}
               
               fill
@@ -88,7 +89,7 @@ const handelplay = () => {
                       ></iframe>
                     ) : (
                       <Image
-                        src={selectedCategory?.seriesimagesCutmez[0]?.url}
+                        src={selectedCategory?.seriesimagesCutmez[0]?.url ? selectedCategory?.seriesimagesCutmez[0]?.url :image }
                         alt="trailer-cover"
                         fill
                         objectFit="cover"
@@ -109,7 +110,7 @@ const handelplay = () => {
                     selectedCategory?.seriesimagesCutmez?.map((item , index) =>{
                       return  <div key={item.url} className="w-full h-[212px] relative rounded-lg overflow-hidden">
                       <Image
-                        src={item?.url}
+                        src={item?.url ? item?.url : image}
                         alt={item.url}
                         fill
                         objectFit="cover"

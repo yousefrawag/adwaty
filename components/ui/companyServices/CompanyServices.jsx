@@ -8,7 +8,7 @@ const CompanyServices = () => {
       <div className="container mx-auto px-4">
         <div>
             <div>
-                <div className="relative w-[500px] h-[340px]">
+                <div className="relative w-full mb-40 xl:w-[500px] h-[340px]">
                     <Image
                     src="/images/297~new-services-.svg"
                     alt="not found"
@@ -30,7 +30,7 @@ const CompanyServices = () => {
                     <div className="bg-[#06A580] rounded-lg text-white flex items-center justify-center h-10 w-10"><SlEnergy />
                     </div>
                     <span className="text-grayColor text-[14px] font-medium inline-block my-2">طاقتنا</span>
-                    <p className="text-[#181818] leading-7">فريق إنتاج CAP لديه القدرة على إدارة أكثر من 5 مشاريع في الوقت ذاته في بلدان مختلفة، وهي لبنان والسعودية والمغرب وتركيا والإمارات العربية المتحدة</p>
+                    <p className="text-[#181818] leading-7">فريق إنتاج روح استوديو لديه القدرة على إدارة أكثر من 5 مشاريع في الوقت ذاته في بلدان مختلفة، وهي لبنان والسعودية والمغرب وتركيا والإمارات العربية المتحدة</p>
                 </div>
                     <Image
                     src="/images/graphic-designer-editing-footage-software-working-edit-video-montage-with-color-grading-audio-effects-sound-film-production-content-making-creative-movie-computer.svg"
