@@ -29,9 +29,9 @@ const Category = () => {
   }, [data]);
   useEffect(() => {
     if (data) {
-      filterationItems("الكل");
+     setData(data)
     }
-  });
+  } , [data]);
   if (loading) {
     return <h2>loadding...</h2>;
   }
@@ -73,7 +73,7 @@ const Category = () => {
                       objectFit="cover"
                     />
                   </div>
-                  <div className="absolute flex flex-col items-start px-6 justify-center transition-all duration-200 group-hover:translate-y-0 w-full h-full bg-[#CDCBC9] bottom-0 translate-y-full lef-0">
+                  <div className="absolute flex flex-col items-start px-6 justify-center transition-all duration-200 group-hover:translate-y-0 w-full h-[50%] bg-[#CDCBC9] bottom-0 translate-y-full lef-0">
                     <h1 className="text-[#3C3F46] font-bold text-[16px]">
                       {item.title}
                     </h1>
@@ -86,7 +86,7 @@ const Category = () => {
                         WebkitLineClamp: 3,
                       }}
                     >
-                      {item?.details}
+                      {item?.details.slice(0 , 70) + "..."}
                     </p>
                     <div className="bg-[#2D3036] items-center mt-2 text-white flex gap-2 py-2 rounded-full px-2">
                       <button

@@ -36,13 +36,13 @@ const Contact = () => {
                                 name="name"
                                 type="text"
                                 className="peer text-[14px] placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                                placeholder="أدخل الاسم"
+                                placeholder=" الاسم"
                               />
                               <label
                                 htmlFor="name"
                                 className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                               >
-                                أدخل الاسم
+                                 الاسم
                               </label>
                             </div>
                             <div className="relative">
@@ -52,13 +52,13 @@ const Contact = () => {
                                 name="phone"
                                 type="phone"
                                 className="peer text-[14px] placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                                placeholder="أدخل الهاتف"
+                                placeholder=" الهاتف"
                               />
                               <label
                                 htmlFor="phone"
                                 className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                               >
-                                أدخل الهاتف
+                                 الهاتف
                               </label>
                             </div>
                             <div className="relative">
@@ -68,13 +68,13 @@ const Contact = () => {
                                 name="email"
                                 type="text"
                                 className="peer text-[14px] placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                                placeholder="أدخل البريد الإلكتروني"
+                                placeholder=" البريد الإلكتروني"
                               />
                               <label
                                 htmlFor="email"
                                 className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                               >
-                                أدخل البريد الإلكتروني
+                                 البريد الإلكتروني
                               </label>
                             </div>
                             <div className="relative">
@@ -84,13 +84,13 @@ const Contact = () => {
                                 name="textArea"
                                 type="text"
                                 className="peer text-[14px] placeholder-transparent h-[100px] w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600"
-                                placeholder="أدخل رسالتك"
+                                placeholder=" رسالتك"
                               />
                               <label
                                 htmlFor="textArea"
                                 className="absolute right-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm"
                               >
-                                أدخل رسالتك
+                                 رسالتك
                               </label>
                             </div>
                             <div className="relative">

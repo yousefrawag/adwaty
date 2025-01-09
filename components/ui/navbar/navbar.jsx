@@ -49,13 +49,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-white dark:bg-dark w-full z-40 ${
-        pathname === "/" || pathname === "/series"
-          ? `fixed top-0 dark:bg-transparent bg-transparent ${
-              isScrolled ? "!bg-white shadow-lg dark:!bg-dark shadow-lg" : ""
-            }}`
-          : ""
-      }`}
+    className={`bg-white dark:bg-dark w-full z-40 fixed top-0 
+      ${isScrolled ? "!bg-white shadow-lg dark:!bg-dark" : "bg-transparent dark:bg-transparent"}
+    `}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-3 rounded-lg">
@@ -65,16 +61,16 @@ const Navbar = () => {
                 src={logo}
                 alt="Picture of the logo"
                 sizes="100vw"
-                width={120}
-                height={100}
+                width={180}
+                height={150}
               />
             ) : (
               <Image
                 src="/images/darkLogo.svg"
                 alt="Picture of the logo"
                 sizes="100vw"
-                width={120}
-                height={100}
+                width={190}
+                height={120}
               />
             )}
           </div>
@@ -88,7 +84,7 @@ const Navbar = () => {
                         ? `text-primary border-b-[1px] border-primary py-2`
                         : pathname === "/" || pathname === "/series"
                         ? `py-2 text-black dark:text-white hover:text-primary dark:hover:text-primary ${
-                            isScrolled ? "!text-grayColor dark:!text-white" : ""
+                            isScrolled ? "!text-black dark:!text-white" : ""
                           }`
                         : `py-2 text-grayColor dark:text-white hover:text-primary dark:hover:text-primary`
                     }

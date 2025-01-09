@@ -6,17 +6,17 @@ const ModulePop = ({ onClose, isVisible, videoUrl }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center ">
-      <div className="relative  p-2 rounded-md shadow-lg   w-[70vw] bg-white">
+      <div className="relative  rounded-md shadow-lg   w-[70vw] bg-black">
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-3 right-5 text-gray-500 hover:text-gray-800"
+          className="absolute top-3 right-5 text-white hover:text-gray-800"
         >
           ✕
         </button>
         
         {/* Video Section */}
-        <div className="mb-5  w-full">
+        <div className="mb-5  w-full bg-black">
           {/* Check if a video URL is provided */}
           {videoUrl ? (
             <div className="video-container w-full h-full mt-10">
