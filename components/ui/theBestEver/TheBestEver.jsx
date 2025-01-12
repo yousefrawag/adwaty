@@ -51,7 +51,7 @@ const TheBestEver = () => {
           {
             blogs?.map((item) =>{
               return  <SwiperSlide className={cardStyle} key={item.id}>
-             <div className="w-full h-[200px] relative">
+             <div className="w-full h-[300px] relative">
                         <Image
                           src={ item?.img }
                           alt="picture 1"
@@ -60,7 +60,7 @@ const TheBestEver = () => {
                         />
                       </div>
                
-              <div className="w-full p-2 pb-3">
+              <div className="w-full p-4">
                 <span className={hStyle}>{
                   item?.title
                   }</span>
@@ -87,9 +87,8 @@ const TheBestEver = () => {
   );
 };
 
-const cardStyle = "bg-white  shadow-lg rounded-[5px]";
+const cardStyle = "bg-white overflow-hidden shadow-lg rounded-lg";
 const pStyle = "text-grayColor text-[14px] leading-7 my-4";
 const hStyle = "font-meduim text-black  text-[24px]";
-const btnStyle =
-  "bg-[#06A580] text-white w-[170px] py-2 flex items-center justify-center gap-2 rounded-full mt-3";
+const btnStyle = "bg-[#06A580] text-white w-[170px] py-2 flex items-center hover:opacity-50 duration-200 ease-in-out justify-center gap-2 rounded-full mt-3";
 export default TheBestEver;

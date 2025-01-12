@@ -5,7 +5,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaPlay } from "react-icons/fa6";
 import Link from "next/link.js";
-import { CiCirclePlus } from "react-icons/ci";
+import { FaPlus } from "react-icons/fa";
 import Image from 'next/image';
 // Import Swiper styles
 import 'swiper/css';
@@ -48,7 +48,7 @@ const VariousPrograms = ({ data }) => {
         {data?.map((item) => (
           <SwiperSlide
             key={item.id}
-            className="group shadow-lg w-[100%] relative h-[192px] bg-red-300 rounded "
+            className="group shadow-lg w-[100%] relative h-[192px] overflow-hidden"
           >
             <div>
               <Image
@@ -61,21 +61,29 @@ const VariousPrograms = ({ data }) => {
                 {item?.kindOfSeries}
               </span>
             </div>
-            <div className="absolute flex flex-col items-start px-6 justify-center transition-all duration-200 group-hover:translate-y-0 w-full h-full bg-[#CDCBC9] bottom-0 translate-y-full lef-0">
-              <h1 className="text-[#3C3F46] font-bold text-[16px]">{item.title}</h1>
-              <p className="text-[#3C3F46] text-[14px]">{item?.details?.slice(0, 40) + "..."}</p>
-              <div className="bg-[#2D3036] items-center mt-2 text-white flex gap-2 py-2 rounded-full px-2">
-                <button onClick={() => handelpopup(item?.promoLink)} className="flex items-center gap-2">
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]">
-                    <FaPlay className="text-[10px]" />
-                  </span>
-                  <span className="text-[12px]">شاهد الان</span>
-                </button>
-                <Link href={`/series/${item.id}`} className="flex items-center gap-2">
-                  <span><CiCirclePlus className="text-[18px]" /></span>
-                  <span className="text-[12px]">المزيد</span>
-                </Link>
-              </div>
+            <div className="absolute flex flex-col items-start px-6 pb-6 justify-end transition-all duration-200 group-hover:translate-y-0 w-full h-[100%] bottom-0 translate-y-full lef-0" style={{background: "linear-gradient(0deg,#0d1c27 11.97%,transparent)"}}>
+              <h1 className="text-[#ffffff] font-bold text-[16px]">{item.title}</h1>
+              <p className="text-[#dddddd] text-[14px]">{item?.details?.slice(0, 40) + "..."}</p>
+              <div className="bg-[#2D3036] items-center mt-2 text-white flex gap-2 py-2 rounded-full px-4">
+                      <button
+                        onClick={() => handelpopup(item?.promoLink)}
+                        className="flex items-center gap-2 hover:opacity-50 duration-200"
+                      >
+                        <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]">
+                          <FaPlay className="text-[10px]" />
+                        </span>
+                        <span className="text-[12px]">شاهد الان</span>
+                      </button>
+                      <Link
+                        href={`/series/${item.id}`}
+                        className="flex items-center gap-2 hover:opacity-50 duration-200"
+                      >
+                        <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]">
+                          <FaPlus className="text-[12px] mr-[1px]" />
+                        </span>
+                        <span className="text-[12px]">المزيد</span>
+                      </Link>
+                    </div>
             </div>
           </SwiperSlide>
         ))}

@@ -40,10 +40,6 @@ const ModernBlogs = ({blogs}) => {
             </div>
             })
           }
-       
-        
-       
-     
         </div>
       </div>
     </section>

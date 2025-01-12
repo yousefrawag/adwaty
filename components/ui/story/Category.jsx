@@ -89,7 +89,7 @@ const Category = () => {
                     >
                       {item?.details.slice(0 , 70) + "..."}
                     </p>
-                    <div className="bg-[#2D3036] items-center mt-2 text-white flex gap-2 py-2 rounded-full px-2">
+                    <div className="bg-[#2D3036] items-center mt-2 text-white flex gap-2 py-2 rounded-full px-4">
                       <button
                         onClick={() => handelpopup(item?.promoLink)}
                         className="flex items-center gap-2 hover:opacity-50 duration-200"

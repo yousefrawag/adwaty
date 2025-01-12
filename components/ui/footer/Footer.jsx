@@ -32,10 +32,10 @@ const Footer = () => {
         <div className='w-full px-10 xl:px-0 lg:px-0'>
             <h2 className={headStyle}>تابعونا</h2>
             <div className='flex gap-4'>
-                <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="#"><FaFacebookF /></Link>
-                <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="https://www.instagram.com/rohsaudi/"><FaInstagram /></Link>
-                <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="https://x.com/Rohsaudi?mx=2"><FaSquareXTwitter /></Link>
-                <Link className='w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center' href="#"><FaYoutube /></Link>
+                <Link className='w-9 h-9 hover:opacity-50 duration-200 rounded-full bg-primary text-white flex items-center justify-center' href="#"><FaFacebookF /></Link>
+                <Link className='w-9 h-9 hover:opacity-50 duration-200 rounded-full bg-primary text-white flex items-center justify-center' href="https://www.instagram.com/rohsaudi/"><FaInstagram /></Link>
+                <Link className='w-9 h-9 hover:opacity-50 duration-200 rounded-full bg-primary text-white flex items-center justify-center' href="https://x.com/Rohsaudi?mx=2"><FaSquareXTwitter /></Link>
+                <Link className='w-9 h-9 hover:opacity-50 duration-200 rounded-full bg-primary text-white flex items-center justify-center' href="#"><FaYoutube /></Link>
             </div>
         </div>
       </div>
@@ -45,6 +45,6 @@ const Footer = () => {
 }
 
 const headStyle = 'text-[22px] font-bold mb-6 '
-const textColor = "text-grayColor dark:text-white"
+const textColor = "text-grayColor dark:text-white hover:text-primary"
 
 export default Footer

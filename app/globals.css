@@ -5,10 +5,10 @@
 
 
 * {
+  @apply transition-colors duration-200;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 
 body {
@@ -20,6 +20,7 @@ h1 {
   font-size: 32px;
   line-height: 43.58px;
   font-weight: 600;
+
 }
 
 .swiper-pagination {

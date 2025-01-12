@@ -52,11 +52,11 @@ const handelplay = () => {
         );
       case "team":
         return (
-          <ul className="list-disc pl-5 text-grayColor grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4">
+          <ul className="list-disc pl-5 text-grayColor grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-4">
             {selectedCategory?.castimagesCutmez?.map((cover, index) => (
               <div
               key={`${index + 1} + ${cover}`}
-              className="w-full h-[212px] relative rounded-lg overflow-hidden"
+              className="w-full [border-image:linear-gradient(to_top_right,#f6b73c,#4d9f0c)_30] border-4 border-solid border-transparent bg-white p-4 h-[280px] relative overflow-hidden max-w-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
             >
               <Image
                 src={cover?.url ? cover?.url : image}
