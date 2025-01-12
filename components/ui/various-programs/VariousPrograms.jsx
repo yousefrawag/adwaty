@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from 'react';
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,8 +15,14 @@ import 'swiper/css/autoplay';
 
 // import required modules
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
-
+import ModulePop from '@/components/common/modulepop';
 const VariousPrograms = ({ data }) => {
+    const [isVisible, setisvobale] = useState(false);
+    const [promlink, setPromolink] = useState("");
+    const handelpopup = (item) => {
+      setPromolink(item);
+      setisvobale(true);
+    };
   return (
     <section className='py-pp_80 dark:bg-dark dark:text-white px-5 relative'>
       <div className="container mx-auto">
@@ -88,6 +94,11 @@ const VariousPrograms = ({ data }) => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <ModulePop
+        onClose={() => setisvobale(false)}
+        isVisible={isVisible}
+        videoUrl={promlink}
+      />
     </section>
   );
 };
