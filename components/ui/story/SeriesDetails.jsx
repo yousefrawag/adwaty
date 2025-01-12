@@ -5,7 +5,16 @@ import Image from "next/image";
 import { FaLocationDot } from "react-icons/fa6";
 import { AuthFetchBlog } from "@/utils/FetchSeries";
 import image from "@/public/images/feat1.svg"
-import { FaPlay } from "react-icons/fa";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Link from "next/link";
+import { FaPlay } from "react-icons/fa6";
+import { CiCirclePlus } from "react-icons/ci";
+
+import ModulePop from "@/components/common/modulepop";
 const SeriesDetails = ({ selectedCategoryId }) => {
   const {data } = AuthFetchBlog()
   const [playVideo , setPlayvideo] = useState(false)
@@ -17,7 +26,12 @@ const SeriesDetails = ({ selectedCategoryId }) => {
 const handelplay = () => {
   setPlayvideo(true)
 }
- 
+   const [isVisible , setvisbale] = useState(false)
+   const [videoUrl , setVideourl] = useState("")
+   const handelpopup = (promlink) =>{
+     setVideourl(promlink)
+     setvisbale(true)
+   }
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -74,9 +88,41 @@ const handelplay = () => {
   };
 
   return (
-    <div className="py-10 mt-[97px] dark:bg-dark">
+    <div className="py-10  dark:bg-dark">
+   <section className="w-full h-[500px] mt-20"> {/* Explicit height */}
+  <div className="h-full w-full">
+    <Swiper
+      navigation
+      pagination={{ type: "bullets", clickable: true }}
+      style={{ width: "100%", height: "100%" }} // Use 100% height relative to the parent
+      autoplay={{
+        delay: 2500,
+      }}
+      loop={true}
+      modules={[Autoplay, Navigation, Pagination]}
+    >
+      {selectedCategory?.seriesimagesCutmez?.map((item) => (
+        <SwiperSlide key={item.url}>
+          <div
+            className="relative w-full h-full bg-cover"
+          >
+            <Image 
+              src={item.url ? item.url : image}
+              alt="image"
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+  <ModulePop onClose={() => setvisbale(false)} isVisible={isVisible} videoUrl={videoUrl} /> 
+</section>
+
       <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
            <div className="w-full h-[449px] relative rounded-lg overflow-hidden retaltive">
                     {playVideo ? (
                       <iframe
@@ -120,20 +166,26 @@ const handelplay = () => {
                   }
                 
                 </div>
-              </div>
-        <div className="flex flex-col items-start gap-4 xl:flex-row lg:flex-row  pt-10 dark:bg-dark">
+              </div> */}
+   
+        <div className="flex flex-col items-start gap-4  pt-10 dark:bg-dark">
           <div className="w-fll xl:w-1/4 lg:w-1/4">
             <div>
               <h1 className="font-bold text-grayColor dark:text-white">{selectedCategory?.title}</h1>
             </div>
             <div className="flex gap-2 mt-2 items-center">
               <FaLocationDot className="text-primary" />
-              <h4 className="font-bold text-grayColor dark:text-white">{selectedCategory?.country}</h4>
+              <h4 className=" mt-5 font-bold text-grayColor w-full grid grid-cols-3 gap-3 items-center dark:text-white">
+                
+                <span>{selectedCategory?.country}</span>
+                <span>{selectedCategory?.category}</span>
+                <span>{selectedCategory?.kindOfSeries}</span>
+                </h4>
             </div>
           </div>
           <div className="w-full xl:w-3/4  lg:w-3/4">
             <div>
-              <ul className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-4 items-center text-[18px] font-medium">
+              <ul className="grid grid-cols-1 gap-5 items-center text-[18px] font-medium">
                 <li
                   className={`dark:text-white ${liStyle} ${
                     activeTab === "general_view" ? "border-primary" : ""
@@ -176,8 +228,23 @@ const handelplay = () => {
   );
 };
 
-const liStyle = "cursor-pointer border-b-2 py-2 px-12 dark:text-white";
+const liStyle = "cursor-pointer border-b-2 w-full lg:w-[50%] py-2 px-12 dark:text-white";
 
 export default SeriesDetails;
 
+//  <div className="h-full w-full absolute left-0 top-0 bg-black opacity-20">
+           
+// </div>
+// <div className="absolute z-2 min-h-[200px] flex p-3  flex-col justify-start w-[700px]  bottom-[10rem]  right-[1rem]">
+//  <span className="text-white font-medium	text-2xl">{selectedCategory?.title}</span>
+//  <p className="text-[#FFFFFF] text-[14px] mt-3 w-[70%] lg:w-[60%] leading-7">{selectedCategory?.details?.slice(0, 140) + "..."}</p>
+//  <div className="bg-[#2D3036] items-center mt-5 text-white flex gap-2 rounded-full w-[100px] p-2">
+//      <button className="flex items-center gap-2" onClick={() => handelpopup(promoLink)}>
+//     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]"><FaPlay className="text-[10px]" /></span><span className="text-[12px]">شاهد الان</span>
+//     </button> 
+  
+//   </div>
+
+
+// </div>
 

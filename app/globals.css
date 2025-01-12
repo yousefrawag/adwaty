@@ -41,7 +41,8 @@ h1 {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #06A580 !important; /* Main color for active dot */
+  background-color: #684c99
+  !important; /* Main color for active dot */
 }
 .loader, .loader:before, .loader:after {
   border-radius: 50%;

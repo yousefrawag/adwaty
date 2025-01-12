@@ -61,16 +61,16 @@ const Navbar = () => {
                 src={logo}
                 alt="Picture of the logo"
                 sizes="100vw"
-                width={180}
-                height={150}
+                width={170}
+                height={130}
               />
             ) : (
               <Image
                 src="/images/darkLogo.svg"
                 alt="Picture of the logo"
                 sizes="100vw"
-                width={190}
-                height={120}
+                width={170}
+                height={130}
               />
             )}
           </div>
@@ -94,7 +94,7 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+           <span></span>
             </ul>
           </div>
           {/* Mobile Menu Button */}
@@ -140,8 +140,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                 ))}
-                <ThemeToggle  darkMode={darkMode} setDarkMode={setDarkMode}/>
-              </ul>
+<span></span>              </ul>
             </div>
           )}
         </div>

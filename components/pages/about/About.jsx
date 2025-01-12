@@ -4,7 +4,7 @@ import OurTeam from '@/components/ui/ourTeam/OurTeam.jsx'
 const About = () => {
   return (
     <div>
-      <section className='w-full h-[300px] relative'>
+      <section className='w-full h-[300px] relative mt-10'>
         <Image
         src="/images/company.svg"
         objectFit='cover'

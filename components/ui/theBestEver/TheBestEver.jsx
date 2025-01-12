@@ -15,7 +15,7 @@ import { AuthFetchpresesleas } from "@/utils/FetchSeries";
 const TheBestEver = () => {
    const {  blogs } = AuthFetchpresesleas();
   return (
-    <section className="py-pp_80 bg-gradient-to-r from-[#00CC9A] to-[#009BFB] dark:bg-dark dark:text-white">
+    <section className="py-pp_80 bg-[#eee] dark:bg-dark dark:text-white">
       <div className="container mx-auto">
         <div className="pb-10">
           <h1 className="dark:text-white">تصريحات صحفية</h1>
@@ -90,5 +90,5 @@ const TheBestEver = () => {
 const cardStyle = "bg-white overflow-hidden shadow-lg rounded-lg";
 const pStyle = "text-grayColor text-[14px] leading-7 my-4";
 const hStyle = "font-meduim text-black  text-[24px]";
-const btnStyle = "bg-[#06A580] text-white w-[170px] py-2 flex items-center hover:opacity-50 duration-200 ease-in-out justify-center gap-2 rounded-full mt-3";
+const btnStyle = "bg-primary text-white w-[170px] py-2 flex items-center hover:opacity-50 duration-200 ease-in-out justify-center gap-2 rounded-full mt-3";
 export default TheBestEver;

@@ -24,7 +24,7 @@ const OurTeam = () => {
           />
         </div>
         <div className="p-6 md:w-2/3 text-center md:text-right">
-          <h2 className="text-xl font-bold text-green-600 mb-2">أحمد البشري</h2>
+          <h2 className="text-xl font-bold text-primary mb-2">أحمد البشري</h2>
           <p className="text-gray-700 font-semibold mb-4">منتج وكاتب روائي ودرامي سعودي</p>
           <p className="text-gray-600 max-w-2xl leading-8">
             مؤسس روح استوديو خبرة تزيد عن 15 عام في المجال الإعلامي. مؤسس وشريك لمجموعة من الشركات في المجال، عمل مستشاراً إعلامياً في MBC وعمل لدى العديد من الجهات الإعلامية، انتج العديد من المسلسلات والبرامج للقنوات والمنصات الإعلامية.
@@ -34,7 +34,7 @@ const OurTeam = () => {
       {/* Card 2 */}
       <div className="flex flex-col md:flex-row items-center py-8 md:items-start rounded-lg overflow-hidden bg-white">
         <div className="p-6 md:w-2/3 text-center md:text-right">
-          <h2 className="text-xl font-bold text-green-600 mb-2">مشعل المطيري</h2>
+          <h2 className="text-xl font-bold text-primary mb-2">مشعل المطيري</h2>
           <p className="text-gray-700 font-semibold mb-4">منتج وممثل سعودي</p>
           <p className="text-gray-600 max-w-2xl leading-8">
             مؤسس روح استوديو وشركة طريق الفن عام خبرة تزيد عن 20 عام في المجال الإعلامي. رئيس مجلس إدارة جمعية الأفلام المهنية، حائز على جائزة افضل ممثل لعام 2017 في مهرجان أفلام السعودية. انتج العديد من الأفلام والمسلسلات للقنوات والمنصات الإعلامية.

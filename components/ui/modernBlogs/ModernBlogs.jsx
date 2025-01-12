@@ -47,7 +47,7 @@ const ModernBlogs = ({blogs}) => {
 };
 
 const btnStyle =
-  "bg-[#06A580] text-white w-[170px] py-2 flex items-center justify-center gap-2 rounded-full";
+  "bg-primary text-white w-[170px] py-2 flex items-center justify-center gap-2 rounded-full";
 const pStyle = "text-grayColor text-[14px] leading-7 my-4";
 const hStyle = "font-meduim text-black  text-[24px]";
 const cardStyle = "bg-white shadow-lg rounded-lg overflow-hidden h-auto";

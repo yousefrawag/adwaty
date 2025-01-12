@@ -8,7 +8,7 @@ const CompanyServices = () => {
       <div className="container mx-auto px-4">
         <div>
             <div>
-                <div className="relative w-full mb-40 xl:w-[500px] h-[340px]">
+                <div className="relative w-full lg:mb-20 mb-40 xl:w-[500px] h-[340px]">
                     <Image
                     src="/images/297~new-services-.svg"
                     alt="not found"
