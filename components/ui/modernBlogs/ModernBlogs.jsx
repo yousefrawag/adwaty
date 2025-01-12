@@ -4,10 +4,10 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const ModernBlogs = ({blogs}) => {
   return (
-    <section className="py-pp_80 bg-gradient-to-r from-[#00CC9A] to-[#009BFB] overflow-hidden">
+    <section className="py-pp_80 bg-[#eee] overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="mb-8">
-          <h1 className="text-white">المدونات الحديثة</h1>
+          <h1 className="text-primary">المدونات الحديثة</h1>
         </div>
         <div className="grid cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-4">
           {
