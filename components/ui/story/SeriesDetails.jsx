@@ -183,7 +183,7 @@ const handelplay = () => {
                 </h4>
             </div>
           </div>
-          <div className="w-full xl:w-3/4  lg:w-3/4">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2">
             <div>
               <ul className="grid grid-cols-1 gap-5 items-center text-[18px] font-medium">
                 <li
@@ -232,19 +232,5 @@ const liStyle = "cursor-pointer border-b-2 w-full lg:w-[50%] py-2 px-12 text-bla
 
 export default SeriesDetails;
 
-//  <div className="h-full w-full absolute left-0 top-0 bg-black opacity-20">
-           
-// </div>
-// <div className="absolute z-2 min-h-[200px] flex p-3  flex-col justify-start w-[700px]  bottom-[10rem]  right-[1rem]">
-//  <span className="text-white font-medium	text-2xl">{selectedCategory?.title}</span>
-//  <p className="text-[#FFFFFF] text-[14px] mt-3 w-[70%] lg:w-[60%] leading-7">{selectedCategory?.details?.slice(0, 140) + "..."}</p>
-//  <div className="bg-[#2D3036] items-center mt-5 text-white flex gap-2 rounded-full w-[100px] p-2">
-//      <button className="flex items-center gap-2" onClick={() => handelpopup(promoLink)}>
-//     <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]"><FaPlay className="text-[10px]" /></span><span className="text-[12px]">شاهد الان</span>
-//     </button> 
-  
-//   </div>
 
-
-// </div>
 

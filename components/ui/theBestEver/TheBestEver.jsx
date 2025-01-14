@@ -18,7 +18,7 @@ const TheBestEver = () => {
     <section className="py-pp_80 bg-[#eee] dark:bg-dark dark:text-white">
       <div className="container mx-auto">
         <div className="pb-10">
-          <h1 className="dark:text-white">تصريحات صحفية</h1>
+          <h1 className="text-black">تصريحات صحفية</h1>
         </div>
         <Swiper
           slidesPerView={3} // Default number of slides to show
