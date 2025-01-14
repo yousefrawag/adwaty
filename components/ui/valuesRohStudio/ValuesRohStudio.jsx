@@ -10,14 +10,8 @@ const ValuesRohStudio = () => {
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 pt-14 gap-8'>
             <div className='flex h-[165px] w-full gap-4 bg-[#F5F5F5]  p-6 rounded-lg shadow-md'>
-                <div className='w-[8%] h-[45px] rounded-lg relative'>
-                    <Image 
-                    src="/images/icon_1.svg"
-                    alt='icon'
-                    fill
-                    objectFit='cover'
-                    className='rounded-lg'
-                    />
+                <div className='w-[8%] h-[45px] rounded-lg relative bg-primary flex items-center justify-center'>
+              <span className='text-xl font-bold text-white'>01</span> 
                 </div>
                 <div className='w-[92%]'>
                     <h4 className='font-bold text-[16px]'>تمكين الابداع</h4>
@@ -25,14 +19,8 @@ const ValuesRohStudio = () => {
                 </div>
             </div>
             <div className='flex h-[165px] w-full gap-4 bg-[#F5F5F5] p-6 rounded-lg shadow-md'>
-            <div className='w-[8%] h-[45px] rounded-lg relative'>
-                    <Image 
-                    src="/images/icon_2.svg"
-                    alt='icon'
-                    fill
-                    objectFit='cover '
-                    className='rounded-lg'
-                    />
+            <div className='w-[8%] h-[45px] rounded-lg relative bg-primary flex items-center justify-center'>
+              <span className='text-xl font-bold text-white'>02</span> 
                 </div>
                 <div className='w-[92%]'>
                     <h4 className='font-bold text-[16px]'>سيدرز آرت برودكشن</h4>

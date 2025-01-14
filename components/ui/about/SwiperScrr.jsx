@@ -45,7 +45,7 @@ const SwiperScrr = () => {
                     <GoArrowUpRight /> عن الشركة
                   </Link>
                 </div>
-                <div className="w-[657px] h-[390px] relative rounded overflow-hidden">
+                <div className="w-[657px] h-[390px] relative rounded overflow-hidden ml-4">
                   <Image
                     src={item.image}
                     alt="about company image"

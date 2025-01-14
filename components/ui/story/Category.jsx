@@ -61,7 +61,8 @@ const Category = () => {
           <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-10">
             {myData?.map((item) => {
               return (
-                <div
+                <Link 
+                href={`/series/${item.id}`}
                   key={item.id}
                   className="group transition ease-in-out duration-300 hover:scale-110 shadow-lg w-[100%] relative h-[300px] bg-red-300 rounded overflow-hidden"
                 >
@@ -89,28 +90,9 @@ const Category = () => {
                     >
                       {item?.details.slice(0 , 70) + "..."}
                     </p>
-                    <div className="bg-[#2D3036] items-center mt-2 text-white flex gap-2 py-2 rounded-full px-4">
-                      <button
-                        onClick={() => handelpopup(item?.promoLink)}
-                        className="flex items-center gap-2 hover:opacity-50 duration-200"
-                      >
-                        <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]">
-                          <FaPlay className="text-[10px]" />
-                        </span>
-                        <span className="text-[12px]">شاهد الان</span>
-                      </button>
-                      <Link
-                        href={`/series/${item.id}`}
-                        className="flex items-center gap-2 hover:opacity-50 duration-200"
-                      >
-                        <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]">
-                          <FaPlus className="text-[12px] mr-[1px]" />
-                        </span>
-                        <span className="text-[12px]">المزيد</span>
-                      </Link>
-                    </div>
+                  
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

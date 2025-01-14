@@ -49,14 +49,15 @@ const Navbar = () => {
 
   return (
     <nav
-    className={`bg-white dark:bg-dark w-full z-40 fixed top-0 
-      ${isScrolled ? "!bg-white shadow-lg dark:!bg-dark" : "bg-transparent dark:bg-transparent"}
+    className={`bg-white  w-full z-40 fixed top-0 
+      ${isScrolled ? "!bg-white shadow-lg dark:!bg-dark" : "bg-transparent"}
     `}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-3 rounded-lg">
           <div>
             {darkMode ? (
+              <Link  href="/">
               <Image
                 src={logo}
                 alt="Picture of the logo"
@@ -64,7 +65,9 @@ const Navbar = () => {
                 width={170}
                 height={130}
               />
+              </Link>
             ) : (
+              <Link  href="/">
               <Image
                 src="/images/darkLogo.svg"
                 alt="Picture of the logo"
@@ -72,6 +75,7 @@ const Navbar = () => {
                 width={170}
                 height={130}
               />
+              </Link>
             )}
           </div>
           <div>
@@ -83,10 +87,10 @@ const Navbar = () => {
                       pathname === link.path
                         ? `text-primary border-b-[1px] border-primary py-2`
                         : pathname === "/" || pathname === "/series"
-                        ? `py-2 text-black dark:text-white hover:text-primary dark:hover:text-primary ${
+                        ? `py-2 text-black dark:text-white hover:text-primary  ${
                             isScrolled ? "!text-black dark:!text-white" : ""
                           }`
-                        : `py-2 text-grayColor dark:text-white hover:text-primary dark:hover:text-primary`
+                        : `py-2 text-grayColor  hover:text-primary `
                     }
                     href={link.path}
                   >
@@ -120,7 +124,7 @@ const Navbar = () => {
             </button>
           </div>
           {menuOpen && (
-            <div className="block lg:none absolute top-[97px] right-0 bg-white dark:bg-grayColor shadow-lg rounded-b-lg w-full z-50 p-4">
+            <div className="block lg:none absolute top-[97px] right-0 bg-white  shadow-lg rounded-b-lg w-full z-50 p-4">
               <ul className="flex flex-col gap-4 text-[16px] font-medium">
                 {links.map((link, index) => (
                   <li

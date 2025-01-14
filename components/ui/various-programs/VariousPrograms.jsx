@@ -56,6 +56,7 @@ const VariousPrograms = ({ data }) => {
             key={item.id}
             className="group shadow-lg w-[100%] relative h-[192px] overflow-hidden"
           >
+            <Link  href={`/series/${item.id}`}>
             <div>
               <Image
                 src={item?.seriesimagesCutmez[0]?.url}
@@ -70,27 +71,10 @@ const VariousPrograms = ({ data }) => {
             <div className="absolute flex flex-col items-start px-6 pb-6 justify-end transition-all duration-200 group-hover:translate-y-0 w-full h-[100%] bottom-0 translate-y-full lef-0" style={{background: "linear-gradient(0deg,#0d1c27 11.97%,transparent)"}}>
               <h1 className="text-[#ffffff] font-bold text-[16px]">{item.title}</h1>
               <p className="text-[#dddddd] text-[14px]">{item?.details?.slice(0, 40) + "..."}</p>
-              <div className="bg-[#2D3036] items-center mt-2 text-white flex gap-2 py-2 rounded-full px-4">
-                      <button
-                        onClick={() => handelpopup(item?.promoLink)}
-                        className="flex items-center gap-2 hover:opacity-50 duration-200"
-                      >
-                        <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]">
-                          <FaPlay className="text-[10px]" />
-                        </span>
-                        <span className="text-[12px]">شاهد الان</span>
-                      </button>
-                      <Link
-                        href={`/series/${item.id}`}
-                        className="flex items-center gap-2 hover:opacity-50 duration-200"
-                      >
-                        <span className="w-6 h-6 flex items-center justify-center rounded-full bg-gradient-to-r from-[#00CC9A] to-[#009BFB]">
-                          <FaPlus className="text-[12px] mr-[1px]" />
-                        </span>
-                        <span className="text-[12px]">المزيد</span>
-                      </Link>
-                    </div>
+           
             </div>
+            </Link>
+        
           </SwiperSlide>
         ))}
       </Swiper>
