@@ -6,7 +6,7 @@ const RelatedBlogs = ({blogs}) => {
   return (
     <div className="mt-10">
         <div className="flex justify-center items-center w-full mb-5">
-           <span  className='text-lg font-bold text-[#06A580]'>ذات صلة</span>
+           <span  className='text-lg font-bold text-primary'>ذات صلة</span>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 container mx-auto gap-4">
              
