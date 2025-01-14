@@ -4,7 +4,7 @@
 @tailwind utilities;
 @font-face {
   font-family: '29LTBukra';
-  src: url('/public/fonts/29ltbukraregular.ttf') format('truetype');
+  src: url('/fonts/29ltbukraregular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
