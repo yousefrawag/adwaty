@@ -2,7 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@font-face {
+  font-family: '29LTBukra';
+  src: url('/public/fonts/29ltbukraregular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   @apply transition-colors duration-200;
@@ -11,9 +16,13 @@
   box-sizing: border-box;
 }
 
+
+
+
 body {
   margin: 0;
   padding: 0;
+  font-family: '29LTBukra', sans-serif !important;
 }
 
 h1 {
