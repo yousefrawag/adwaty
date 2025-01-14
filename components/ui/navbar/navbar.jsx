@@ -59,7 +59,7 @@ const Navbar = () => {
             {darkMode ? (
               <Link  href="/">
               <Image
-                src={logo}
+                src="/images/darkLogo.svg"
                 alt="Picture of the logo"
                 sizes="100vw"
                 width={170}

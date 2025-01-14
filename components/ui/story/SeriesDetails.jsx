@@ -171,15 +171,15 @@ const handelplay = () => {
         <div className="flex flex-col items-start gap-4  pt-10 dark:bg-dark">
           <div className="w-fll xl:w-1/4 lg:w-1/4">
             <div>
-              <h1 className="font-bold text-grayColor dark:text-white">{selectedCategory?.title}</h1>
+              <h1 className="font-bold text-primary">{selectedCategory?.title}</h1>
             </div>
             <div className="flex gap-2 mt-2 items-center">
               <FaLocationDot className="text-primary" />
               <h4 className=" mt-5 font-bold text-grayColor w-full grid grid-cols-3 gap-3 items-center dark:text-white">
                 
-                <span>{selectedCategory?.country}</span>
-                <span>{selectedCategory?.category}</span>
-                <span>{selectedCategory?.kindOfSeries}</span>
+                <span className="text-black">{selectedCategory?.country}</span>
+                <span className="text-black">{selectedCategory?.category}</span>
+                <span className="text-black">{selectedCategory?.kindOfSeries}</span>
                 </h4>
             </div>
           </div>
