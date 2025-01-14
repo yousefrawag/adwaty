@@ -168,14 +168,14 @@ const handelplay = () => {
                 </div>
               </div> */}
    
-        <div className="flex flex-col items-start gap-4  pt-10 dark:bg-dark">
+        <div className="flex flex-col items-start gap-4  pt-10 ">
           <div className="w-fll xl:w-1/4 lg:w-1/4">
             <div>
               <h1 className="font-bold text-primary">{selectedCategory?.title}</h1>
             </div>
             <div className="flex gap-2 mt-2 items-center">
               <FaLocationDot className="text-primary" />
-              <h4 className=" mt-5 font-bold text-grayColor w-full grid grid-cols-3 gap-3 items-center dark:text-white">
+              <h4 className=" mt-5 font-bold text-grayColor w-full grid grid-cols-3 gap-3 items-center ">
                 
                 <span className="text-black">{selectedCategory?.country}</span>
                 <span className="text-black">{selectedCategory?.category}</span>
@@ -187,7 +187,7 @@ const handelplay = () => {
             <div>
               <ul className="grid grid-cols-1 gap-5 items-center text-[18px] font-medium">
                 <li
-                  className={`dark:text-white ${liStyle} ${
+                  className={`text-black ${liStyle} ${
                     activeTab === "general_view" ? "border-primary" : ""
                   }`}
                   onClick={() => setActiveTab("general_view")}
@@ -195,7 +195,7 @@ const handelplay = () => {
                   نظرة عامة
                 </li>
                 <li
-                  className={` dark:text-white ${liStyle} ${
+                  className={`text-black ${liStyle} ${
                     activeTab === "watch" ? "border-primary" : ""
                   }`}
                   onClick={() => setActiveTab("watch")}
@@ -203,7 +203,7 @@ const handelplay = () => {
                   شاهد
                 </li>
                 <li
-                  className={`dark:text-white ${liStyle} ${
+                  className={`text-black ${liStyle} ${
                     activeTab === "covers" ? "border-primary" : ""
                   }`}
                   onClick={() => setActiveTab("covers")}
@@ -213,7 +213,7 @@ const handelplay = () => {
                 <li
                   className={`${liStyle} ${
                     activeTab === "team" ? "border-primary" : ""
-                  } dark:text-white`}
+                  } text-black`}
                   onClick={() => setActiveTab("team")}
                 >
                   فريق العمل
@@ -228,7 +228,7 @@ const handelplay = () => {
   );
 };
 
-const liStyle = "cursor-pointer border-b-2 w-full lg:w-[50%] py-2 px-12 dark:text-white";
+const liStyle = "cursor-pointer border-b-2 w-full lg:w-[50%] py-2 px-12 text-black";
 
 export default SeriesDetails;
 
