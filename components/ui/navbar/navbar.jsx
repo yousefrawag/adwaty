@@ -84,13 +84,14 @@ const Navbar = () => {
                 <li key={index} className="capitalize text-sm py-1 font-medium">
                   <Link
                     className={
+                      
                       pathname === link.path
                         ? `text-primary border-b-[1px] border-primary py-2`
                         : pathname === "/" || pathname === "/series"
-                        ? `py-2 text-black dark:text-white hover:text-primary  ${
-                            isScrolled ? "!text-black dark:!text-white" : ""
+                        ? `py-2 text-black  hover:text-primary  ${
+                            isScrolled ? "!text-black " : ""
                           }`
-                        : `py-2 text-grayColor  hover:text-primary `
+                        : `py-2 text-black  hover:text-primary `
                     }
                     href={link.path}
                   >
@@ -136,7 +137,7 @@ const Navbar = () => {
                       className={
                         pathname === link.path
                           ? `text-primary border-b-[1px] border-primary py-2`
-                          : `py-2 text-black dark:text-white hover:text-primary`
+                          : `py-2 text-black  hover:text-primary`
                       }
                       href={link.path}
                     >
