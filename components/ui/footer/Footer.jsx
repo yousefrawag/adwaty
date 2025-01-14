@@ -45,6 +45,6 @@ const Footer = () => {
 }
 
 const headStyle = 'text-[22px] font-bold mb-6 '
-const textColor = "text-grayColor dark:text-white hover:text-primary"
+const textColor = "text-grayColor hover:text-primary"
 
 export default Footer
