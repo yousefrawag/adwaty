@@ -86,3 +86,114 @@ export const AuthFetchpresesleas = () => {
 
     return { loading, blogs  };
 };
+
+export const AuthFetchHomeAbout = () => {
+    const [data, setdata] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const getData = async () => {
+        try {
+            const response = await client.getEntries({ content_type: 'homePageAboutSection' });
+        
+        const customzData = response?.items?.map((item) => {
+            const { title, details, image} = item.fields;
+           
+            const img = image?.fields?.file?.url?.startsWith("//")
+            ? `https:${image.fields.file.url}`
+            : image?.fields?.file?.url;
+            const id = item.sys.id;
+            return {title, details , id , img}
+        })  
+            
+
+            console.log("Custom Data:", customzData); // Verify data mapping
+            setdata([...customzData]); // Update state
+            setLoading(false);
+        } catch (error) {
+            console.error("Error fetching blogs:", error);
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
+
+
+
+    return { loading, data  };
+};
+
+export const AuthFetchTeam = () => {
+    const [data, setdata] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const getData = async () => {
+        try {
+            const response = await client.getEntries({ content_type: 'pageAboutTeamWork' });
+        
+        const customzData = response?.items?.map((item) => {
+            const { title, about, image ,job} = item.fields;
+           
+            const img = image?.fields?.file?.url?.startsWith("//")
+            ? `https:${image.fields.file.url}`
+            : image?.fields?.file?.url;
+            const id = item.sys.id;
+            return {title, about , id , img ,job}
+        })  
+            
+
+            console.log("Custom Data:", customzData); // Verify data mapping
+            setdata([...customzData]); // Update state
+            setLoading(false);
+        } catch (error) {
+            console.error("Error fetching blogs:", error);
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
+
+
+
+    return { loading, data  };
+};
+
+export const AuthFetchservicea = () => {
+    const [data, setdata] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const getData = async () => {
+        try {
+            const response = await client.getEntries({ content_type: 'pageServices' });
+        
+        const customzData = response?.items?.map((item) => {
+            const { title, details, image } = item.fields;
+           
+            const img = image?.fields?.file?.url?.startsWith("//")
+            ? `https:${image.fields.file.url}`
+            : image?.fields?.file?.url;
+            const id = item.sys.id;
+            return {title, details , id , img }
+        })  
+            
+
+            console.log("Custom Data:", customzData); // Verify data mapping
+            setdata([...customzData]); // Update state
+            setLoading(false);
+        } catch (error) {
+            console.error("Error fetching blogs:", error);
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
+
+
+
+    return { loading, data  };
+};
