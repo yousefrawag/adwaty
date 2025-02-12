@@ -20,20 +20,20 @@ const checkimageprotcoll = (images) =>{
 
     const getData = async () => {
         try {
-            const response = await client.getEntries({ content_type: 'rohaStudioSeries' });
+            const response = await client.getEntries({ content_type: 'adwaty' });
         
         const customzData = response?.items?.map((item) => {
-            const { title,kindOfSeries , details, category , country ,promoLink ,castImages , seriesImages } = item.fields;
+            const { title, details, categoray  , images  , howiuse , benfites} = item.fields;
            
-           const seriesimagesCutmez = checkimageprotcoll(seriesImages)
-           const castimagesCutmez = checkimageprotcoll(castImages)
+           const imagesCutomez = checkimageprotcoll(images)
+       
             const id = item.sys.id;
-            return {title, details, category , country , kindOfSeries, promoLink , castimagesCutmez , seriesimagesCutmez , id}
+            return {title, details, categoray , howiuse , benfites , id , imagesCutomez}
         })  
             
 
             console.log("Custom Data:", customzData); // Verify data mapping
-            setdata([...customzData]); // Update state
+            setdata(customzData); // Update state
             setLoading(false);
         } catch (error) {
             console.error("Error fetching blogs:", error);
@@ -56,16 +56,16 @@ export const AuthFetchpresesleas = () => {
 
     const getData = async () => {
         try {
-            const response = await client.getEntries({ content_type: 'blogs' })
+            const response = await client.getEntries({ content_type: 'customers' })
         
             const CustomezData = response?.items?.map((item) => {
-                const { title, details, image } = item.fields;
+                const { name, details, image } = item.fields;
                 const id = item.sys.id;
                 const createdAt = item.sys.createdAt;
                 const img = image?.fields?.file?.url?.startsWith("//")
                   ? `https:${image.fields.file.url}`
                   : image?.fields?.file?.url;
-                return { id, title, details, img, createdAt };
+                return { id, name, details, img, createdAt };
               });    
             
 
@@ -93,7 +93,7 @@ export const AuthFetchHomeAbout = () => {
 
     const getData = async () => {
         try {
-            const response = await client.getEntries({ content_type: 'homePageAboutSection' });
+            const response = await client.getEntries({ content_type: 'adwaty' });
         
         const customzData = response?.items?.map((item) => {
             const { title, details, image} = item.fields;
@@ -130,16 +130,16 @@ export const AuthFetchTeam = () => {
 
     const getData = async () => {
         try {
-            const response = await client.getEntries({ content_type: 'pageAboutTeamWork' });
+            const response = await client.getEntries({ content_type: 'team' });
         
         const customzData = response?.items?.map((item) => {
-            const { title, about, image ,job} = item.fields;
+            const { name, about, image ,job} = item.fields;
            
             const img = image?.fields?.file?.url?.startsWith("//")
             ? `https:${image.fields.file.url}`
             : image?.fields?.file?.url;
             const id = item.sys.id;
-            return {title, about , id , img ,job}
+            return {name, about , id , img ,job}
         })  
             
 
@@ -167,7 +167,7 @@ export const AuthFetchservicea = () => {
 
     const getData = async () => {
         try {
-            const response = await client.getEntries({ content_type: 'pageServices' });
+            const response = await client.getEntries({ content_type: 'servives' });
         
         const customzData = response?.items?.map((item) => {
             const { title, details, image } = item.fields;

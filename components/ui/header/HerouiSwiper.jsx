@@ -32,7 +32,7 @@ const HerouiSwiper = ({data}) => {
             loop={true}
             modules={[Autoplay, Navigation, Pagination]}
           >
-            {data?.map(({ id, seriesimagesCutmez  ,title , details , promoLink , castimagesCutmez }) => (
+            {data?.map(({ title, details, categoray , howiuse , benfites , id , imagesCutomez }) => (
               <SwiperSlide key={id}>
                 <div
                   className={`h-[100%] h-[100%] relative w-full left-0 top-0 bg-cover `}
@@ -40,7 +40,7 @@ const HerouiSwiper = ({data}) => {
 
                 >
                   <Image 
-                  src={seriesimagesCutmez?.[0]?.url}
+                  src={imagesCutomez?.[0]?.url}
                   alt="image"
                   objectFit="cover"
                   fill

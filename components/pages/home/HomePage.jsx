@@ -1,5 +1,5 @@
 "use client"
-import About from "@/components/ui/about/About";
+import AboutComponent  from "@/components/ui/about/About";
 
 import Header from "@/components/ui/header/Header";
 import Story from "@/components/ui/story/Story";
@@ -17,14 +17,15 @@ const {data , loading} = AuthFetchBlog()
     <div>
       {/* header section */}
       <Header data={data} />
+         {/* about section */}
+         <AboutComponent  />
       {/* Story Section */}
       <Story />
-      {/* about section */}
-      <About />
+   
       {/* Various Programs */}
-      <VariousPrograms data={data} />
+      <VariousPrograms  />
       {/* The Best Ever */}
-      <TheBestEver />
+      {/* <TheBestEver /> */}
     </div>
   );
 };

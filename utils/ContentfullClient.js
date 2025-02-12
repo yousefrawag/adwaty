@@ -1,8 +1,8 @@
 import { createClient } from 'contentful';
 
 const client = createClient({
-  space:"hbxueoxa6j1p", // Your Contentful space ID
-  accessToken: "IkHXB9IpuxXU0g-_zGnYoPuhdwrOF0wS57xFUPgnfwM", // Your Contentful access token
+  space:"n2wzi80qy71a", // Your Contentful space ID
+  accessToken: "nwamoSd9TCiOM32w0HTvZV4MCO33IDEYa_QYBoibgFY", // Your Contentful access token
   environment: "master",
 });
 

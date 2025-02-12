@@ -11,9 +11,7 @@ const OurTeam = () => {
       <div className="container mx-auto px-4">
         <div className="text-center dark:text-white">
           <h1 className="font-bold text-3xl">فريق عملنا</h1>
-          <p className="text-grayColor dark:text-white mt-4 max-w-xl mx-auto text-lg leading-relaxed">
-            بمعداتٍ حديثة وعالية الجودة، يضمن لك فريقنا الاستفادة من مجموعة هائلة وعلى كفاءة عالية من موظفي الإنتاج المحترفين في غضون أفواجٍ من الإبداع!
-          </p>
+    
         </div>
         <div className="grid grid-cols-1 md:grid-cols-1 gap-16 pt-16">
           {data?.map((item, index) => {
@@ -28,14 +26,14 @@ const OurTeam = () => {
                 <div className="w-full md:w-1/3 h-[280px] overflow-hidden relative">
                   <Image
                     src={item.img}
-                    alt={item?.title || "Team-member"}
+                    alt={item?.name || "Team-member"}
                     fill
                     objectFit="cover"
                     className="rounded-lg"
                   />
                 </div>
                 <div className="p-6 md:w-2/3 text-center md:text-right">
-                  <h2 className="text-xl font-bold text-primary mb-2">{item?.title}</h2>
+                  <h2 className="text-xl font-bold text-primary mb-2">{item?.name}</h2>
                   <p className="text-gray-700 font-semibold mb-4">{item?.job}</p>
                   <p className="text-gray-600 max-w-2xl leading-8">{item?.about}</p>
                 </div>

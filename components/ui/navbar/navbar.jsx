@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/images/logo2.svg";
+import logo from "@/public/images/logo2.png";
 import ThemeToggle from "./ThemeToggle";
 import { usePathname } from "next/navigation.js";
 import { useState, useEffect } from "react";
@@ -13,10 +13,9 @@ const Navbar = () => {
 
   const links = [
     { lable: "الرئيسية", path: "/" },
-    { lable: "مسلسلات", path: "/series" },
-    { lable: "الشركة", path: "/about" },
+    { lable: "أدواتى", path: "/series" },
+    { lable: "من نحن", path: "/about" },
     { lable: "الخدمات", path: "/services" },
-    { lable: "تصريحات صحفية", path: "/pressReleases" },
     { lable: "اتصل بنا", path: "/contact" },
   ];
 
@@ -59,7 +58,7 @@ const Navbar = () => {
             {darkMode ? (
               <Link  href="/">
               <Image
-                src="/images/darkLogo.svg"
+               src={logo}
                 alt="Picture of the logo"
                 sizes="100vw"
                 width={170}
@@ -69,7 +68,7 @@ const Navbar = () => {
             ) : (
               <Link  href="/">
               <Image
-                src="/images/darkLogo.svg"
+                src={logo}
                 alt="Picture of the logo"
                 sizes="100vw"
                 width={170}
@@ -123,6 +122,7 @@ const Navbar = () => {
                 />
               </svg>
             </button>
+           
           </div>
           {menuOpen && (
             <div className="block lg:none absolute top-[97px] right-0 bg-white  shadow-lg rounded-b-lg w-full z-50 p-4">

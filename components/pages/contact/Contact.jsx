@@ -1,5 +1,6 @@
 import Image from "next/image.js";
 import React from "react";
+import logo from "@/public/images/logo2.png";
 
 const Contact = () => {
   return (
@@ -107,10 +108,10 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="w-full h-ful relative">
+          <div className="w-[80%] h-ful relative">
           
               <Image
-                src="/images/306~cinema 1.svg"
+                src={logo}
                 alt="picture 1"
                 fill
                 objectFit="cover"

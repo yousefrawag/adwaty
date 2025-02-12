@@ -44,13 +44,13 @@ const handelplay = () => {
       case "watch":
         return (
           <p className="max-w-lg text-grayColor leading-7">
-            {selectedCategory?.details}
+            {selectedCategory?.benfites}
           </p>
         );
       case "covers":
         return (
           <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4">
-            {selectedCategory?.seriesimagesCutmez?.map((cover, index) => (
+            {selectedCategory?.imagesCutomez?.map((cover, index) => (
               <div
                 key={`${index + 1} + ${cover}`}
                 className="w-full h-[212px] relative rounded-lg overflow-hidden"
@@ -66,21 +66,9 @@ const handelplay = () => {
         );
       case "team":
         return (
-          <ul className="list-disc pl-5 text-grayColor grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-4">
-            {selectedCategory?.castimagesCutmez?.map((cover, index) => (
-              <div
-              key={`${index + 1} + ${cover}`}
-              className="w-full [border-image:linear-gradient(to_top_right,#f6b73c,#4d9f0c)_30] border-4 border-solid border-transparent bg-white p-4 h-[280px] relative overflow-hidden max-w-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
-            >
-              <Image
-                src={cover?.url ? cover?.url : image}
-                alt={`غلاف ${index + 1}`}
-              
-              fill
-              />
-            </div>
-            ))}
-          </ul>
+          <p className="max-w-lg text-grayColor leading-7">
+          {selectedCategory?.howiuse}
+        </p>
         );
       default:
         return null;
@@ -101,7 +89,7 @@ const handelplay = () => {
       loop={true}
       modules={[Autoplay, Navigation, Pagination]}
     >
-      {selectedCategory?.seriesimagesCutmez?.map((item) => (
+      {selectedCategory?.imagesCutomez?.map((item) => (
         <SwiperSlide key={item.url}>
           <div
             className="relative w-full h-full bg-cover"
@@ -170,16 +158,16 @@ const handelplay = () => {
    
         <div className="flex flex-col items-start gap-4  pt-10 ">
           <div className="w-fll xl:w-1/4 lg:w-1/4">
-            <div>
-              <h1 className="font-bold text-primary">{selectedCategory?.title}</h1>
+            <div className="w-full">
+              <h1 className="font-bold w-full text-primary">{selectedCategory?.title}</h1>
             </div>
             <div className="flex gap-2 mt-2 items-center">
               <FaLocationDot className="text-primary" />
               <h4 className=" mt-5 font-bold text-grayColor w-full grid grid-cols-3 gap-3 items-center ">
                 
-                <span className="text-black">{selectedCategory?.country}</span>
-                <span className="text-black">{selectedCategory?.category}</span>
-                <span className="text-black">{selectedCategory?.kindOfSeries}</span>
+            
+                <span className="text-black">{selectedCategory?.categoray}</span>
+                
                 </h4>
             </div>
           </div>
@@ -196,27 +184,27 @@ const handelplay = () => {
                 </li>
                 <li
                   className={`text-black ${liStyle} ${
-                    activeTab === "watch" ? "border-primary" : ""
-                  }`}
-                  onClick={() => setActiveTab("watch")}
-                >
-                  شاهد
-                </li>
-                <li
-                  className={`text-black ${liStyle} ${
                     activeTab === "covers" ? "border-primary" : ""
                   }`}
                   onClick={() => setActiveTab("covers")}
                 >
-                  الغلافات
+                الغلافات
+                </li>
+                <li
+                  className={`text-black ${liStyle} ${
+                    activeTab === "team" ? "border-primary" : ""
+                  }`}
+                  onClick={() => setActiveTab("team")}
+                >
+                   نصائح الاستخدام
                 </li>
                 <li
                   className={`${liStyle} ${
-                    activeTab === "team" ? "border-primary" : ""
+                    activeTab === "watch" ? "border-primary" : ""
                   } text-black`}
-                  onClick={() => setActiveTab("team")}
+                  onClick={() => setActiveTab("watch")}
                 >
-                  فريق العمل
+                النتائج على طفل 
                 </li>
               </ul>
             </div>
@@ -225,6 +213,7 @@ const handelplay = () => {
         </div>
       </div>
     </div>
+
   );
 };
 
