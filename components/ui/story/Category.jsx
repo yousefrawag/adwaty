@@ -91,7 +91,7 @@ const Category = () => {
                         WebkitLineClamp: 3,
                       }}
                     >
-                      {item?.details.slice(0 , 70) + "..."}
+                      {item?.details?.slice(0 , 70) + "..."}
                     </p>
                   
                   </div>
