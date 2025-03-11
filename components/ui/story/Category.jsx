@@ -40,7 +40,7 @@ const Category = () => {
     <div>
       {/* parent */}
       <div className="py-10">
-        <div className="flex gap-4 items-center">
+        <div className="grid grid-col-2 lg:grid-cols-4 gap-4 items-center">
           {unique_Data?.map((category) => {
             return (
               <button
